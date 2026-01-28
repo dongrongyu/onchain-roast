@@ -172,7 +172,7 @@ export async function getSwapTransactions(address: string, limit = 100): Promise
           if (match && match[1]) {
             lastSignature = match[1];
             fetchCount++;
-            console.log(`Pagination hint received, continuing from ${lastSignature.slice(0, 20)}...`);
+            console.log(`Pagination hint received, continuing from ${lastSignature?.slice(0, 20)}...`);
             await new Promise(resolve => setTimeout(resolve, 300));
             continue;
           }
