@@ -1,6 +1,6 @@
 # OnChain Roast
 
-**你的 Solana 钱包毒舌分析师**
+**钱包照妖镜 - 你的 Solana 链上行为无所遁形**
 
 想知道自己炒币有多"韭"吗？OnChain Roast 会分析你的 Solana 钱包链上交易记录，然后毫不留情地嘲讽你。没有安慰，没有滤镜，只有赤裸裸的真相和扎心的吐槽。
 
@@ -62,8 +62,17 @@ npm run dev
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dongrongyu/onchain-roast&env=HELIUS_API_KEY&envDescription=Get%20your%20free%20API%20key%20at%20helius.xyz)
 
+## TODO
+
+- [ ] **AI 个性化分析** - 接入 AI 大模型，根据链上数据生成更智能、更个性化的钱包分析报告
+
 ---
 
 **免责声明**：本项目仅供娱乐，不构成任何投资建议。炒土狗亏钱了别怪我，是你自己选的路。
 
-*Built for Solana Hackathon*
+---
+
+<p align="center">
+  <b>🤖 本项目 100% 由 AI 编写代码</b><br>
+  <i>Built for Solana Hackathon</i>
+</p>
