@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OnChain Roast
+
+**Your Solana wallet's brutally honest therapist.**
+
+Ever wondered how degen your trading really is? OnChain Roast analyzes your Solana wallet and roasts you based on your on-chain trading history. No mercy. No filter. Just cold, hard truths wrapped in savage humor.
+
+## What It Does
+
+Paste your Solana wallet address and get:
+
+- **Degen Score (0-100)** - How degenerate are you, really?
+- **Personality Title** - "Diamond Hands Legend" or "Certified Rug Collector"?
+- **Trading Stats** - Win rate, P&L, holding time, and more
+- **Achievement Badges** - Unlock badges like "Night Owl", "Weekend Warrior", "Paper Hands"
+- **Personalized Roast** - AI-generated roast based on your actual trading behavior
+
+## Screenshots
+
+```
++------------------------------------------+
+|           YOUR DEGEN SCORE               |
+|                                          |
+|              🔥 87 🔥                    |
+|           "Full Degen Mode"              |
+|                                          |
+|  Win Rate: 21%    |    Rugs: 37          |
+|  Avg Hold: 1min   |    P&L: -$69.52      |
+|                                          |
+|  "You've collected more rugs than a      |
+|   Persian carpet dealer. Impressive."    |
++------------------------------------------+
+```
+
+## Tech Stack
+
+- **Next.js 16** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Styling
+- **Helius API** - Solana transaction data
+- **Jupiter API** - Token pricing
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- Helius API Key (free at [helius.xyz](https://helius.xyz))
+
+### Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/dongrongyu/onchain-roast.git
+cd onchain-roast
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.local.example .env.local
+# Edit .env.local and add your HELIUS_API_KEY
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) and get roasted.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## How It Works
 
-To learn more about Next.js, take a look at the following resources:
+1. **Fetch Transactions** - Pulls your recent swap transactions from Helius API
+2. **Analyze Trades** - Calculates win rate, P&L, holding times, rug pulls
+3. **Score Your Degen Level** - Weighted algorithm based on:
+   - Win rate (lower = more degen)
+   - Rug count
+   - Memecoin percentage
+   - Night/weekend trading
+   - Trade frequency
+4. **Generate Roast** - Creates personalized roast based on your trading patterns
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Supported DEXes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Jupiter (v4 & v6)
+- Raydium (AMM & CLMM)
+- Orca (Whirlpool & v1)
+- Serum DEX
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dongrongyu/onchain-roast&env=HELIUS_API_KEY&envDescription=Get%20your%20free%20API%20key%20at%20helius.xyz)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Or deploy manually:
+
+1. Push to GitHub
+2. Import to [Vercel](https://vercel.com)
+3. Add `HELIUS_API_KEY` environment variable
+4. Deploy
+
+## Contributing
+
+PRs welcome. If you can make the roasts more savage, even better.
+
+## License
+
+MIT
+
+---
+
+**Disclaimer**: This is for entertainment purposes only. Not financial advice. If you're losing money trading memecoins, that's on you.
+
+*Built for Solana Hackathon*
