@@ -31,14 +31,6 @@
 +------------------------------------------+
 ```
 
-## 技术栈
-
-- **Next.js 16** - React 框架
-- **TypeScript** - 类型安全
-- **Tailwind CSS 4** - 样式
-- **Helius API** - Solana 交易数据
-- **Jupiter API** - 代币价格
-
 ## 快速开始
 
 ### 前置要求
@@ -66,50 +58,9 @@ npm run dev
 
 打开 [http://localhost:3000](http://localhost:3000)，开始被嘲讽吧。
 
-### 生产构建
-
-```bash
-npm run build
-npm run start
-```
-
-## 工作原理
-
-1. **获取交易记录** - 通过 Helius API 拉取你的 DEX 交易历史
-2. **分析交易数据** - 计算胜率、盈亏、持仓时间、踩雷次数
-3. **计算 Degen 指数** - 基于以下因素加权计算：
-   - 胜率（越低越 degen）
-   - 踩雷数量
-   - 土狗币交易占比
-   - 深夜/周末交易频率
-   - 交易频率
-4. **生成吐槽文案** - 根据你的交易特征生成专属毒舌点评
-
-## 支持的 DEX
-
-- Jupiter (v4 & v6)
-- Raydium (AMM & CLMM)
-- Orca (Whirlpool & v1)
-- Serum DEX
-
 ## 一键部署
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dongrongyu/onchain-roast&env=HELIUS_API_KEY&envDescription=Get%20your%20free%20API%20key%20at%20helius.xyz)
-
-或手动部署：
-
-1. 推送代码到 GitHub
-2. 在 [Vercel](https://vercel.com) 导入项目
-3. 添加环境变量 `HELIUS_API_KEY`
-4. 点击部署
-
-## 贡献
-
-欢迎 PR。如果你能让吐槽更毒，那就更好了。
-
-## 许可证
-
-MIT
 
 ---
 
