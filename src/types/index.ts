@@ -74,3 +74,20 @@ export interface TokenPrice {
   mint: string;
   priceUsd: number;
 }
+
+// Phantom Wallet Provider Types
+export interface PhantomProvider {
+  isPhantom: boolean;
+  isConnected: boolean;
+  publicKey: { toString: () => string } | null;
+  connect: () => Promise<{ publicKey: { toString: () => string } }>;
+  disconnect: () => Promise<void>;
+  on: (event: string, callback: (args: unknown) => void) => void;
+  off: (event: string, callback: (args: unknown) => void) => void;
+}
+
+declare global {
+  interface Window {
+    solana?: PhantomProvider;
+  }
+}

@@ -71,8 +71,7 @@ export default function Home() {
               )}
 
               <div className="mt-12 text-center text-gray-500 text-sm">
-                <p>Powered by Helius API and Jupiter Price API</p>
-                <p className="mt-2">
+                <p>
                   For entertainment purposes only. Not financial advice.
                 </p>
               </div>
